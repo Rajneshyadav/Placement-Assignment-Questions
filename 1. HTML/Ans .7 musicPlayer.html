@@ -1,0 +1,52 @@
+
+<!-- Q.7 Create a simple Music player using html only (5 Marks) -->
+<!-- Answer-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Player</title>
+  <style>
+    .music-player {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .music-player audio {
+      margin-bottom: 10px;
+    }
+    
+    .music-player button {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="music-player">
+    <h2>Music Player</h2>
+    <audio src="path/to/your/song.mp3" controls></audio>
+    <div>
+      <button onclick="playAudio()">Play</button>
+      <button onclick="pauseAudio()">Pause</button>
+      <button onclick="stopAudio()">Stop</button>
+    </div>
+  </div>
+  
+  <script>
+    var audio = document.querySelector('audio');
+    
+    function playAudio() {
+      audio.play();
+    }
+    
+    function pauseAudio() {
+      audio.pause();
+    }
+    
+    function stopAudio() {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  </script>
+</body>
+</html>
